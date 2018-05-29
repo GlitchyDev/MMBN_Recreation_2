@@ -14,12 +14,12 @@ public class Main {
 
 
     public static void main(String[] args) {
-        File file = new File("GameAssets/Fonts/Thin_Uppercase");
+        File file = new File("GameAssets/Fonts/Thin_Special");
         for(File letter : file.listFiles())
         {
             String name = letter.getName().replace(".png","");
-            String newName = name.replace("TN_","");
-            letter.renameTo(new File("GameAssets/Fonts/Thin_Uppercase/" + newName + ".png"));
+            String newName = name.replace("TS_","");
+            letter.renameTo(new File("GameAssets/Fonts/Thin_Special/" + newName + ".png"));
         }
 
     }

@@ -2,8 +2,199 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a1a4fe6-880b-49c4-a2a3-a355198e521c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/Capcom_Logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/Utility/FontDecoder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_!!.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_!.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_#.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_$.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_%.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_&amp;.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_'.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_(.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_+.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_,.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_....png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_..png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_.CENTERED.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_.OPEN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_;.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_=.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_@.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_ALPHA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_AQUA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_ASTRIC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_BDOWN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_BETA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_BLEFT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_BNOTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_BRICK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_BRIGHT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_B^.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_CELCIUS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_COLEN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_DIVIDE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_DOWN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_DOWNFACINGU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_DQUOTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_DQUOTEEND.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_FEMALE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_HAND.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_HEART.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_JPBRACKET.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_JPBRACKETEND.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_LEFT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_LEFTFACINGU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_LEFTSLANT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_MALE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_NOTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_OPENDONUT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_OPENDOT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_OPENDOWN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_OPENQUAD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_OPENSQUARE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_OPENUP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_PIPE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_QUESTIONMARK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_RIGHT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_RIGHTFACINGU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_RIGHTSLANT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SDQUOTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SIGMA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SOLIDDOT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SOLIDDOWN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SOLIDLEFT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SOLIDQUAD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SOLIDRIGHT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SOLIDSQUARE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_SOLIDUP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_STAR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_TIMES.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_UNDERSCORE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_UNDERSCORE2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_UP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_UPPERSCORE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_XSTAR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_YEN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_[.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_[[.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_].png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_]].png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_^.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_~.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_!!.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_!.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_#.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_$.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_%.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_&amp;.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_'.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_(.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_).png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_+.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_,.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_....png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_..png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_.CENTERED.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_.OPEN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_;.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_=.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_@.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_ALPHA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_AQUA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_ASTRIC.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_BDOWN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_BETA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_BLEFT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_BNOTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_BRICK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_BRIGHT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_B^.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_CELCIUS.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_COLEN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_DIVIDE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_DOWN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_DOWNFACINGU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_DQUOTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_DQUOTEEND.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_FEMALE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_HAND.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_HEART.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_JPBRACKET.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_JPBRACKETEND.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_LEFT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_LEFTFACINGU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_LEFTSLANT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_MALE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_NOTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_OPENDONUT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_OPENDOT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_OPENDOWN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_OPENQUAD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_OPENSQUARE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_OPENUP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_PIPE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_QUESTIONMARK.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_RIGHT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_RIGHTFACINGU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_RIGHTSLANT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SDQUOTE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SIGMA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SOLIDDOT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SOLIDDOWN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SOLIDLEFT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SOLIDQUAD.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SOLIDRIGHT.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SOLIDSQUARE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_SOLIDUP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_STAR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_TIMES.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_UNDERSCORE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_UNDERSCORE2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_UP.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_UPPERSCORE.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_XSTAR.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_YEN.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_[.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_[[.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_].png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_]].png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_^.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Special/TS_~.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_A.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_B.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_C.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_D.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_E.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_F.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_G.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_H.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_I.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_J.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_K.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_L.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_M.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_N.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_O.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_P.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_Q.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_R.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_S.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_T.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_U.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_V.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_W.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_Y.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/Fonts/Thin_Uppercase/TN_Z.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/GameStateType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/GameStateType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/MMBN_Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/MMBN_Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/GameStateType.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/GameStateType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,23 +206,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MMBN_Game.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MMBN_Game.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="44" column="49" selection-start-line="44" selection-end-line="45" />
+            <state relative-caret-position="278">
+              <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="47" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#680#681#0" expanded="true" />
@@ -41,15 +220,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DebugGameState.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/DebugGameState.java">
+      <file leaf-file-name="Capcom_Logo.png" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/Capcom_Logo.png">
+          <provider selected="true" editor-type-id="images" />
+        </entry>
+      </file>
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="689">
-              <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="292">
+              <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#647#648#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#331#332#0" expanded="true" />
+                <element signature="e#355#356#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -62,10 +246,6 @@
               <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2824#2825#0" expanded="true" />
-                <element signature="e#2877#2878#0" expanded="true" />
-                <element signature="e#2931#2932#0" expanded="true" />
-                <element signature="e#2976#2977#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -88,17 +268,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/Game.java" />
-        <option value="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/GameStateType.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/DebugGameState.java" />
-        <option value="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/DebugGameState2.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java" />
-        <option value="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/Utility/FontDecoder.java" />
+        <option value="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/GameStateType.java" />
+        <option value="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="637" />
     <option name="y" value="1" />
     <option name="width" value="699" />
@@ -140,7 +321,7 @@
               <item name="MMBN_Recreation_2" type="462c0819:PsiDirectoryNode" />
               <item name="GameAssets" type="462c0819:PsiDirectoryNode" />
               <item name="Sprites" type="462c0819:PsiDirectoryNode" />
-              <item name="Pet_Icon" type="462c0819:PsiDirectoryNode" />
+              <item name="MainMenuUIElements" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MMBN_Recreation_2" type="b2602c69:ProjectViewProjectNode" />
@@ -185,22 +366,22 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\MainMenuUIElements" />
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets" />
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Uppercase" />
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Lowercase" />
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\Font" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.GlitchyDev.GameStates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Special" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\Font" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\Pet_Icon" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.GlitchyDev.GameStates" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Uppercase" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Lowercase" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\Font" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -215,7 +396,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.MMBN_Game">
     <configuration name="MMBN_Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.GlitchyDev.MMBN_Game" />
       <module name="MMBN_Recreation_2" />
@@ -256,8 +437,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="Application.MMBN_Game" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -275,7 +456,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="637" y="1" width="699" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -285,19 +467,19 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33768353" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.49926794" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -309,6 +491,48 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="44" column="49" selection-start-line="44" selection-end-line="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/DebugGameState.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -344,8 +568,6 @@
           <caret line="16" column="43" lean-forward="true" selection-start-line="16" selection-start-column="43" selection-end-line="16" selection-end-column="43" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -406,34 +628,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Utility/FontDecoder.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_1.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_2.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_4.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_8.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_0.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_17.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/GameStateType.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_29.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/DebugGameState.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="689">
-          <caret line="47" column="40" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/DebugGameState2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
+        <state relative-caret-position="493">
           <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -441,68 +677,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java">
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/DebugGameState.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="44" column="49" selection-start-line="44" selection-end-line="45" />
+        <state relative-caret-position="-187">
+          <caret line="16" column="13" lean-forward="true" selection-start-line="16" selection-end-line="17" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#710#711#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/90.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/89.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/65.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/Lettering.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/66.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/91.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/92.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/93.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/117.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/118.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/201.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/TH_-.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/TH_A.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/TH_y.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/Font/74.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Fonts/blah">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -510,30 +693,33 @@
           <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2824#2825#0" expanded="true" />
-            <element signature="e#2877#2878#0" expanded="true" />
-            <element signature="e#2931#2932#0" expanded="true" />
-            <element signature="e#2976#2977#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Fonts/Thin_Special/TS_MALE.png">
+    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/Capcom_Logo.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Utility/FontDecoder.java">
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="33" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        <state relative-caret-position="292">
+          <caret line="23" column="75" lean-forward="true" selection-start-line="23" selection-start-column="75" selection-end-line="23" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#355#356#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="69" selection-start-line="21" selection-start-column="69" selection-end-line="21" selection-end-column="69" />
+        <state relative-caret-position="278">
+          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="47" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
           </folding>
         </state>
       </provider>
