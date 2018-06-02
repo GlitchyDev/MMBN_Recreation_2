@@ -1,10 +1,7 @@
 package com.GlitchyDev.IO;
 
 import javafx.scene.media.Media;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Image;
-import org.newdawn.slick.SlickException;
-import org.newdawn.slick.Sound;
+import org.newdawn.slick.*;
 
 import java.io.*;
 import java.util.HashMap;
@@ -88,6 +85,7 @@ public class AssetLoader {
     {
         return spriteAssets.get(name);
     }
+
 
 }
 

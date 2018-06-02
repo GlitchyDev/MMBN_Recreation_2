@@ -13,7 +13,7 @@ public class MMBN_Game extends StateBasedGame {
     private static final int FPS_TARGET = 60;
     private static final int WIDTH = 240;
     private static final int HEIGHT = 160;
-    public static final float SCALE = 1.0f;
+    public static final float SCALE = 2.0f;
 
 
     // Class Constructor
