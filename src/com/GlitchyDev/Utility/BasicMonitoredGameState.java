@@ -1,0 +1,57 @@
+package com.GlitchyDev.Utility;
+
+import com.GlitchyDev.MMBN_Game;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.SlickException;
+import org.newdawn.slick.state.BasicGameState;
+import org.newdawn.slick.state.StateBasedGame;
+
+public abstract class BasicMonitoredGameState extends BasicGameState {
+    private double renderingUtilization = 0.0;
+    private double updateUtilization = 0.0;
+
+
+    @Override
+    public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
+        long startRender = gameContainer.getTime();
+        doRender(gameContainer,stateBasedGame,graphics);
+        long endRender = gameContainer.getTime();
+
+        long length = endRender-startRender;
+        renderingUtilization = (100.0/(1000.0/MMBN_Game.FPS_TARGET))* length;
+
+    }
+
+    @Override
+    public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
+        long startRender = gameContainer.getTime();
+        doUpdate(gameContainer,stateBasedGame,i);
+        long endRender = gameContainer.getTime();
+
+        long length = endRender-startRender;
+        updateUtilization = (100.0/(1000.0/MMBN_Game.FPS_TARGET))* length;
+    }
+
+    public abstract void doRender(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException;
+    public abstract void doUpdate(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException;
+
+
+
+
+    public double getRenderingUtilization()
+    {
+        return renderingUtilization;
+    }
+
+    public double getUpdateUtilization()
+    {
+        return updateUtilization;
+    }
+
+    public double getTotalUtilization()
+    {
+        return (renderingUtilization+updateUtilization);
+    }
+
+}

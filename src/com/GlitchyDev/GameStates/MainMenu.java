@@ -1,16 +1,19 @@
 package com.GlitchyDev.GameStates;
 
-import com.GlitchyDev.IO.AssetLoader;
 import com.GlitchyDev.IO.SpriteUtil;
 import com.GlitchyDev.MMBN_Game;
+import com.GlitchyDev.Utility.BasicMonitoredGameState;
 import org.newdawn.slick.*;
-import org.newdawn.slick.state.BasicGameState;
 import org.newdawn.slick.state.StateBasedGame;
 
-public class MainMenu extends BasicGameState {
+public class MainMenu extends BasicMonitoredGameState {
     private GameContainer container;
     private long lastStateChange = 0;
     private MainMenuSubState currentSubState;
+
+    private int backgroundFrameCount = 0;
+    private int pressStartFrameCount = 0;
+
 
 
     @Override
@@ -26,7 +29,7 @@ public class MainMenu extends BasicGameState {
     }
 
     @Override
-    public void render(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
+    public void doRender(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
 
         /*
         graphics.setColor(new Color(1.0f,0.0f,0.0f, (float) getStateProgressionPercentage()));
@@ -40,7 +43,6 @@ public class MainMenu extends BasicGameState {
             case CAPCOM_FADEIN:
                 double adjustedProgress = (1.0/4) * (int)(getStateProgressionPercentage() * 4);
                 SpriteUtil.drawSprite("Capcom_Logo",9,61,MMBN_Game.SCALE,adjustedProgress);
-                System.out.println(adjustedProgress);
                 break;
             case CAPCOM_LOGO:
                 SpriteUtil.drawSprite("Capcom_Logo",9,61,MMBN_Game.SCALE,1);
@@ -51,11 +53,32 @@ public class MainMenu extends BasicGameState {
                 break;
             case PRESS_START_FADEIN:
 
+                SpriteUtil.drawSprite("Title_Background", backgroundFrameCount,0,MMBN_Game.SCALE,1.0);
+                SpriteUtil.drawSprite("Title_Background",-256 + backgroundFrameCount,0,MMBN_Game.SCALE,1.0);
+
+                SpriteUtil.drawSprite("Menu_Title",9,20,MMBN_Game.SCALE,1.0);
+                SpriteUtil.drawSprite("Copyright",7,126,MMBN_Game.SCALE,1.0);
+
+                if(pressStartFrameCount < 25) {
+                    SpriteUtil.drawSprite("Press_Start", 78, 100, MMBN_Game.SCALE, 1.0);
+                }
+
+
+                graphics.setColor(new Color(0.0f,0.0f,0.0f, (float) (1.0 - getStateProgressionPercentage())));
+                graphics.fillRect(0,0,gameContainer.getWidth(),gameContainer.getHeight());
+
                 break;
             case PRESS_START:
-                int adjustment = (int)(240 * (getPassedTime()%1.0));
-                SpriteUtil.drawSprite("Title_Background",adjustment,0,MMBN_Game.SCALE,1.0);
-                SpriteUtil.drawSprite("Title_Background",-240 + adjustment,0,MMBN_Game.SCALE,1.0);
+
+                SpriteUtil.drawSprite("Title_Background", backgroundFrameCount,0,MMBN_Game.SCALE,1.0);
+                SpriteUtil.drawSprite("Title_Background",-256 + backgroundFrameCount,0,MMBN_Game.SCALE,1.0);
+
+                SpriteUtil.drawSprite("Menu_Title",9,20,MMBN_Game.SCALE,1.0);
+                SpriteUtil.drawSprite("Copyright",7,126,MMBN_Game.SCALE,1.0);
+
+                if(pressStartFrameCount < 25) {
+                    SpriteUtil.drawSprite("Press_Start", 78, 100, MMBN_Game.SCALE, 1.0);
+                }
 
                 break;
             case SAVE_STATE:
@@ -64,14 +87,14 @@ public class MainMenu extends BasicGameState {
         }
 
         graphics.setColor(Color.red);
-        graphics.drawString(currentSubState.name(),50,50);
+        graphics.drawString(currentSubState.name() + " " + getTotalUtilization(),80,10);
 
 
 
     }
 
     @Override
-    public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
+    public void doUpdate(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
 
         if(gameContainer.getInput().isKeyDown(Input.KEY_0))
         {
@@ -80,8 +103,43 @@ public class MainMenu extends BasicGameState {
         }
         if(getStateProgressionPercentage() >= 1.0)
         {
+            switch(currentSubState)
+            {
+                case PRESS_START:
+                    pressStartFrameCount = 0;
+                    break;
+                case SAVE_STATE:
+                    break;
+            }
             currentSubState = currentSubState.getNextState();
             lastStateChange = gameContainer.getTime();
+        }
+        else
+        {
+            switch(currentSubState)
+            {
+                case PRESS_START_FADEIN:
+                    backgroundFrameCount += 2;
+                    backgroundFrameCount %= 256;
+                    break;
+                case PRESS_START:
+
+                    backgroundFrameCount += 2;
+                    backgroundFrameCount %= 256;
+
+                    if(pressStartFrameCount >= 32)
+                    {
+                        pressStartFrameCount = 0;
+                    }
+                    else
+                    {
+                        pressStartFrameCount++;
+                    }
+
+                    break;
+                case SAVE_STATE:
+                    break;
+            }
         }
     }
 
@@ -128,11 +186,11 @@ public class MainMenu extends BasicGameState {
             switch(this)
             {
                 case CAPCOM_FADEIN:
-                    return 0.3;
+                    return 0.4;
                 case CAPCOM_LOGO:
-                    return 1.9;
+                    return 1.7;
                 case CAPCOM_FADEOUT:
-                    return 0.3;
+                    return 0.4;
                 case PRESS_START_FADEIN:
                     return 0.2;
                 case PRESS_START:

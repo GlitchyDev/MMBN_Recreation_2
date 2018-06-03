@@ -10,10 +10,11 @@ import org.newdawn.slick.state.StateBasedGame;
 public class MMBN_Game extends StateBasedGame {
 
     // Application Properties
-    private static final int FPS_TARGET = 60;
     private static final int WIDTH = 240;
     private static final int HEIGHT = 160;
-    public static final float SCALE = 2.0f;
+
+    public static final int FPS_TARGET = 60;
+    public static final float SCALE = 1.0f;
 
 
     // Class Constructor
@@ -40,7 +41,7 @@ public class MMBN_Game extends StateBasedGame {
             app.setDisplayMode((int)(WIDTH * SCALE), (int)(HEIGHT * SCALE), false);
             app.setTargetFrameRate(FPS_TARGET);
             app.setShowFPS(true);
-            app.setUpdateOnlyWhenVisible(false);
+            app.setAlwaysRender(true);
             AssetLoader.setDefaultIconss(app,"GameAssets/Sprites/Pet_Icon/PET_1.png","GameAssets/Sprites/Pet_Icon/PET_3.png");
             app.start();
         } catch(SlickException e) {
