@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a1a4fe6-880b-49c4-a2a3-a355198e521c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/GlitchyDev/Utility/BasicMonitoredGameState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameAssets/Sounds/BackgroundThemes/MainMenu_Theme.wav" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GameAssets/Sounds/SFX/JackIn.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$MainMenuSubState.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/MMBN_Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/MMBN_Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$MainMenuSubState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$MainMenuSubState.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/IO/AssetLoader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/IO/AssetLoader.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,8 +25,8 @@
       <file leaf-file-name="MMBN_Game.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-124">
-              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+            <state relative-caret-position="17">
+              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -36,24 +37,11 @@
       <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="188" column="30" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
+            <state relative-caret-position="211">
+              <caret line="197" column="30" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#331#332#0" expanded="true" />
-                <element signature="e#355#356#0" expanded="true" />
-                <element signature="e#4192#4193#0" expanded="true" />
-                <element signature="e#4259#4260#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SpriteUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/SpriteUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -61,8 +49,8 @@
       <file leaf-file-name="AssetLoader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="87" selection-start-line="87" selection-end-line="87" />
+            <state relative-caret-position="192">
+              <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -93,10 +81,11 @@
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/GameStateType.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/Utility/RHelper.java" />
-        <option value="$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/IO/SpriteUtil.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/Utility/BasicMonitoredGameState.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.jql" />
+        <option value="$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java" />
       </list>
     </option>
@@ -131,7 +120,21 @@
               <item name="MMBN_Recreation_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="MMBN_Recreation_2" type="462c0819:PsiDirectoryNode" />
               <item name="GameAssets" type="462c0819:PsiDirectoryNode" />
-              <item name="Fonts" type="462c0819:PsiDirectoryNode" />
+              <item name="Sounds" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MMBN_Recreation_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MMBN_Recreation_2" type="462c0819:PsiDirectoryNode" />
+              <item name="GameAssets" type="462c0819:PsiDirectoryNode" />
+              <item name="Sounds" type="462c0819:PsiDirectoryNode" />
+              <item name="BackgroundThemes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MMBN_Recreation_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MMBN_Recreation_2" type="462c0819:PsiDirectoryNode" />
+              <item name="GameAssets" type="462c0819:PsiDirectoryNode" />
+              <item name="Sounds" type="462c0819:PsiDirectoryNode" />
+              <item name="SFX" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MMBN_Recreation_2" type="b2602c69:ProjectViewProjectNode" />
@@ -182,36 +185,37 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="JQL" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../Slick/lib/lwjgl.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.17382812" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\MainMenuUIElements" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Uppercase" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Lowercase" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\Font" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.GlitchyDev.GameStates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Special" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\Font" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\Pet_Icon" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.GlitchyDev.GameStates" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sounds\BackgroundThemes" />
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sounds\SFX" />
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\MainMenuUIElements" />
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets" />
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Uppercase" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -297,30 +301,60 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3290938" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3290938" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="87" selection-start-line="87" selection-end-line="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3196">
+          <caret line="188" column="30" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -463,27 +497,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_8.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_0.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/NetworkLogin/NetworkLogin_17.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/GameStateType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -511,39 +524,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Utility/RHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="87" selection-start-line="87" selection-end-line="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/Capcom_Logo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/Title_Background.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/SpriteUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Utility/RHelper.java" />
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Utility/BasicMonitoredGameState.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -554,10 +535,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/SpriteUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="60" selection-start-line="8" selection-start-column="60" selection-end-line="8" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GameAssets/Sounds/obama">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-124">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+        <state relative-caret-position="17">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -566,14 +567,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="188" column="30" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
+        <state relative-caret-position="211">
+          <caret line="197" column="30" selection-start-line="197" selection-start-column="30" selection-end-line="197" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#4192#4193#0" expanded="true" />
-            <element signature="e#4259#4260#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,5 +1,6 @@
 package com.GlitchyDev.GameStates;
 
+import com.GlitchyDev.IO.AssetLoader;
 import com.GlitchyDev.IO.SpriteUtil;
 import com.GlitchyDev.MMBN_Game;
 import com.GlitchyDev.Utility.BasicMonitoredGameState;
@@ -101,10 +102,15 @@ public class MainMenu extends BasicMonitoredGameState {
             currentSubState = MainMenuSubState.CAPCOM_FADEIN;
             lastStateChange = gameContainer.getTime();
         }
+
+        // On update
         if(getStateProgressionPercentage() >= 1.0)
         {
             switch(currentSubState)
             {
+                case PRESS_START_FADEIN:
+                    AssetLoader.getSound("MainMenu_Theme").play();
+                    break;
                 case PRESS_START:
                     pressStartFrameCount = 0;
                     break;
@@ -114,6 +120,7 @@ public class MainMenu extends BasicMonitoredGameState {
             currentSubState = currentSubState.getNextState();
             lastStateChange = gameContainer.getTime();
         }
+        // Normal Actions
         else
         {
             switch(currentSubState)
@@ -194,7 +201,7 @@ public class MainMenu extends BasicMonitoredGameState {
                 case PRESS_START_FADEIN:
                     return 0.2;
                 case PRESS_START:
-                    return 60.0;
+                    return 54.0;
                 case SAVE_STATE:
                     return 60.0;
                 default:
