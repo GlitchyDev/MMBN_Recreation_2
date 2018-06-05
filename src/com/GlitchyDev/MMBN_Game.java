@@ -1,6 +1,7 @@
 package com.GlitchyDev;
 
 import com.GlitchyDev.GameStates.MainMenu;
+import com.GlitchyDev.GameStates.OverworldState;
 import com.GlitchyDev.IO.AssetLoader;
 import com.GlitchyDev.IO.SaveLoader;
 import com.GlitchyDev.Utility.GameController;
@@ -29,6 +30,7 @@ public class MMBN_Game extends StateBasedGame {
     public void initStatesList(GameContainer gc) throws SlickException {
         AssetLoader.loadAssets();
         this.addState(new MainMenu());
+        this.addState(new OverworldState());
         //this.addState(new DebugGameState());
         //this.addState(new DebugGameState2());
 

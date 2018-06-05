@@ -33,18 +33,21 @@ public class MainMenu extends BasicMonitoredGameState {
         lastStateChange = gameContainer.getTime();
         currentSubState = MainMenuSubState.CAPCOM_FADEIN;
         this.container = gameContainer;
+
+        if(SaveLoader.doesSaveExists())
+        {
+            cursorPosition = 1;
+        }
+        else
+        {
+            cursorPosition = 0;
+        }
     }
 
     @Override
     public void doRender(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException {
 
-        /*
-        graphics.setColor(new Color(1.0f,0.0f,0.0f, (float) getStateProgressionPercentage()));
-        graphics.fillRect(0,0,100,100);
-        graphics.setColor(Color.red);
-        graphics.drawString(currentSubState.name(),50,50);
-        */
-
+        // The "Rendering" takes each substate into a different subsection
         switch(currentSubState)
         {
             case CAPCOM_FADEIN:
@@ -132,7 +135,39 @@ public class MainMenu extends BasicMonitoredGameState {
                 {
                     SpriteUtil.drawSprite("Press_Start", 78, 100, MMBN_Game.SCALE, 1.0);
                 }
+                break;
 
+            case SAVE_SELECTED:
+                SpriteUtil.drawSprite("Title_Background", backgroundFrameCount,0,MMBN_Game.SCALE,1.0);
+                SpriteUtil.drawSprite("Title_Background",-256 + backgroundFrameCount,0,MMBN_Game.SCALE,1.0);
+
+                SpriteUtil.drawSprite("Menu_Title",9,20,MMBN_Game.SCALE,1.0);
+                SpriteUtil.drawSprite("Copyright",7,126,MMBN_Game.SCALE,1.0);
+
+                if(pressStartFrameCount >= 0) {
+                    if (SaveLoader.doesSaveExists()) {
+                        if (cursorPosition == 0) {
+                            SpriteUtil.drawSprite("NewGame", 90, 92, MMBN_Game.SCALE, 1.0);
+                            SpriteUtil.drawSprite("ContinueG", 90, 108, MMBN_Game.SCALE, 1.0);
+                            SpriteUtil.drawSprite("Cursor", 76 - ((saveFrameCount % 18)/6), 92, MMBN_Game.SCALE, 1.0);
+                        } else {
+                            SpriteUtil.drawSprite("NewGameG", 90, 92, MMBN_Game.SCALE, 1.0);
+                            SpriteUtil.drawSprite("Continue", 90, 108, MMBN_Game.SCALE, 1.0);
+                            SpriteUtil.drawSprite("Cursor", 76 - ((saveFrameCount % 18)/6), 108, MMBN_Game.SCALE, 1.0);
+                        }
+                    } else {
+                        SpriteUtil.drawSprite("NewGame", 90, 92, MMBN_Game.SCALE, 1.0);
+                        SpriteUtil.drawSprite("Cursor", 76 - ((saveFrameCount % 18)/6), 92, MMBN_Game.SCALE, 1.0);
+                    }
+                }
+                else
+                {
+                    SpriteUtil.drawSprite("Press_Start", 78, 100, MMBN_Game.SCALE, 1.0);
+                }
+
+                adjustedProgress = (1.0/15) * (int)(getStateProgressionPercentage() * 15);
+                graphics.setColor(new Color(0.0f,0.0f,0.0f, (float) (adjustedProgress)));
+                graphics.fillRect(0,0,gameContainer.getWidth(),gameContainer.getHeight());
 
                 break;
         }
@@ -148,6 +183,55 @@ public class MainMenu extends BasicMonitoredGameState {
 
     }
 
+    public void drawCapcomLogo()
+    {
+        SpriteUtil.drawSprite("Capcom_Logo",9,61,MMBN_Game.SCALE,1.0);
+    }
+
+    public void drawScreenFadeIn(int sections, Graphics graphics)
+    {
+        double adjustedProgress = 1.0 - (1.0/sections) * (int)(getStateProgressionPercentage() * sections);
+        graphics.setColor(new Color(0.0f,0.0f,0.0f, (float) adjustedProgress));
+        graphics.fillRect(0,0,container.getWidth(),container.getHeight());
+    }
+    public void drawScreenFadeOut(int sections, Graphics graphics)
+    {
+        double adjustedProgress = 1.0 - (1.0/sections) * (int)(getStateProgressionPercentage() * sections);
+        graphics.setColor(new Color(0.0f,0.0f,0.0f, (float) adjustedProgress));
+        graphics.fillRect(0,0,container.getWidth(),container.getHeight());
+    }
+
+    public void drawMainMenu(int sections)
+    {
+        SpriteUtil.drawSprite("Title_Background", backgroundFrameCount,0,MMBN_Game.SCALE,1.0);
+        SpriteUtil.drawSprite("Title_Background",-256 + backgroundFrameCount,0,MMBN_Game.SCALE,1.0);
+
+        SpriteUtil.drawSprite("Menu_Title",9,20,MMBN_Game.SCALE,1.0);
+        SpriteUtil.drawSprite("Copyright",7,126,MMBN_Game.SCALE,1.0);
+    }
+
+    public void drawPressStart(int sections)
+    {
+        SpriteUtil.drawSprite("Press_Start", 78, 100, MMBN_Game.SCALE, 1.0);
+    }
+
+    public void drawSaveSelect(int sections)
+    {
+        if (SaveLoader.doesSaveExists()) {
+            if (cursorPosition == 0) {
+                SpriteUtil.drawSprite("NewGame", 90, 92, MMBN_Game.SCALE, 1.0);
+                SpriteUtil.drawSprite("ContinueG", 90, 108, MMBN_Game.SCALE, 1.0);
+                SpriteUtil.drawSprite("Cursor", 76 - ((saveFrameCount % 18)/6), 92, MMBN_Game.SCALE, 1.0);
+            } else {
+                SpriteUtil.drawSprite("NewGameG", 90, 92, MMBN_Game.SCALE, 1.0);
+                SpriteUtil.drawSprite("Continue", 90, 108, MMBN_Game.SCALE, 1.0);
+                SpriteUtil.drawSprite("Cursor", 76 - ((saveFrameCount % 18)/6), 108, MMBN_Game.SCALE, 1.0);
+            }
+        } else {
+            SpriteUtil.drawSprite("NewGame", 90, 92, MMBN_Game.SCALE, 1.0);
+            SpriteUtil.drawSprite("Cursor", 76 - ((saveFrameCount % 18)/6), 92, MMBN_Game.SCALE, 1.0);
+        }
+    }
     @Override
     public void doUpdate(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
 
@@ -163,12 +247,15 @@ public class MainMenu extends BasicMonitoredGameState {
             switch(currentSubState)
             {
                 case PRESS_START_FADEIN:
-                    AssetLoader.getSound("MainMenu_Theme").play(1.0f,0.1f);
+                    AssetLoader.getSound("MainMenu_Theme").play(1.0f,1.0f);
                     break;
                 case PRESS_START:
                     pressStartFrameCount = 0;
                     pressStartControlerCoolDown = 0;
                     break;
+                case SAVE_SELECTED:
+                    stateBasedGame.enterState(GameStateType.OVERWORLD.ordinal());
+                    // Switch states
             }
             currentSubState = currentSubState.getNextState();
             lastStateChange = gameContainer.getTime();
@@ -200,15 +287,8 @@ public class MainMenu extends BasicMonitoredGameState {
                     if(GameController.isButtonPressed(GButtons.START) && pressStartControlerCoolDown >= 40)
                     {
                         currentSubState = MainMenuSubState.SAVE_STATE;
+                        lastStateChange = gameContainer.getTime();
                         saveFrameCount = -3;
-                        if(SaveLoader.doesSaveExists())
-                        {
-                            cursorPosition = 1;
-                        }
-                        else
-                        {
-                            cursorPosition = 0;
-                        }
                         AssetLoader.getSound("PressStart").play(1.0f,0.8f);
                     }
 
@@ -239,6 +319,8 @@ public class MainMenu extends BasicMonitoredGameState {
                         {
                             cursorPosition = 0;
                             inputUsed = true;
+                            AssetLoader.getSound("SwitchOptions").stop();
+                            AssetLoader.getSound("SwitchOptions").play(1.0f,1.0f);
                         }
                     }
                     if(GameController.isButtonPressed(GButtons.DOWN) && !inputUsed && SaveLoader.doesSaveExists())
@@ -247,6 +329,8 @@ public class MainMenu extends BasicMonitoredGameState {
                         {
                             cursorPosition = 1;
                             inputUsed = true;
+                            AssetLoader.getSound("SwitchOptions").stop();
+                            AssetLoader.getSound("SwitchOptions").play(1.0f,1.0f);
                         }
                     }
                     if(GameController.isButtonPressed(GButtons.A) || GameController.isButtonPressed(GButtons.START) && !inputUsed)
@@ -254,7 +338,10 @@ public class MainMenu extends BasicMonitoredGameState {
                         // Exit into new game or save game
 
                         inputUsed = true;
-                        AssetLoader.getSound("SelectSave").play(1.0f,0.8f);
+                        AssetLoader.getSound("SelectSave").play(1.0f,1.0f);
+                        AssetLoader.getSound("MainMenu_Theme").stop();
+                        currentSubState = MainMenuSubState.SAVE_SELECTED;
+                        lastStateChange = gameContainer.getTime();
                     }
                     if(GameController.isButtonPressed(GButtons.B) && !inputUsed)
                     {
@@ -263,6 +350,12 @@ public class MainMenu extends BasicMonitoredGameState {
                         inputUsed = true;
                     }
 
+                    break;
+                case SAVE_SELECTED:
+                    backgroundFrameCount += 2;
+                    backgroundFrameCount %= 256;
+
+                    saveFrameCount++;
                     break;
             }
         }
@@ -287,7 +380,8 @@ public class MainMenu extends BasicMonitoredGameState {
         PRESS_START_FADEIN,
         PRESS_START,
         PRESS_START_FADEOUT,
-        SAVE_STATE;
+        SAVE_STATE,
+        SAVE_SELECTED;
 
         public MainMenuSubState getNextState() {
             switch(this)
@@ -306,6 +400,8 @@ public class MainMenu extends BasicMonitoredGameState {
                     return CAPCOM_FADEIN;
                 case SAVE_STATE:
                     return CAPCOM_FADEIN;
+                case SAVE_SELECTED:
+                    return PRESS_START_FADEIN;
                 default:
                     return null;
             }
@@ -328,6 +424,8 @@ public class MainMenu extends BasicMonitoredGameState {
                     return 0.1;
                 case SAVE_STATE:
                     return 54.0;
+                case SAVE_SELECTED:
+                    return 0.25;
                 default:
                     return 0;
             }

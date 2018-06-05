@@ -16,6 +16,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("Initializing Synthesiser");
+        long startSynth = System.currentTimeMillis();
         Synthesizer midiSynth = null;
         try {
             midiSynth = MidiSystem.getSynthesizer();
@@ -25,7 +27,7 @@ public class Main {
             e.printStackTrace();
         }
 
-        
+
         midiSynth.unloadAllInstruments(midiSynth.getDefaultSoundbank());
         try {
             midiSynth.loadAllInstruments(MidiSystem.getSoundbank(new File( "DebugAssets/MMBN1.sf2" )));
@@ -34,7 +36,6 @@ public class Main {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
 
 
         /*
@@ -53,14 +54,51 @@ public class Main {
 
         Sequencer sequencer = null;
         try {
-            sequencer = MidiSystem.getSequencer();
+            sequencer = MidiSystem.getSequencer(false);
 
-        sequencer.open();
-        sequencer.getTransmitter().setReceiver(midiSynth.getReceiver());
+            sequencer.open();
+            sequencer.getTransmitter().setReceiver(midiSynth.getReceiver());
 
-        InputStream inputStream = new BufferedInputStream(new FileInputStream(new File("DebugAssets/song000.mid")));
-        sequencer.setSequence(inputStream);
-        sequencer.start();
+            InputStream inputStream = new BufferedInputStream(new FileInputStream(new File("DebugAssets/song000.mid")));
+            sequencer.setSequence(inputStream);
+
+
+
+            Sequencer finalSequencer = sequencer;
+            sequencer.addMetaEventListener(event -> {
+                switch(event.getType())
+                {
+                    case 81:
+                        System.out.println("Sequence Started Playing");
+                        break;
+                    case 47:
+                        System.out.println("Sequencer finished playing");
+                        finalSequencer.close();
+                        break;
+                    case 6:
+                        //-finalSequencer.setLoopStartPoint(finalSequencer.getLoopStartPoint() + 1);
+                        System.out.println("Adjusted Time " + finalSequencer.getLoopStartPoint());
+
+
+                        break;
+                    default:
+                        System.out.println("Unknown Sequencer Event " + event.getType());
+
+                }
+
+            });
+
+            long endSynth = System.currentTimeMillis();
+            System.out.println("Timing " + (endSynth-startSynth)/1000.0 + " " + sequencer.getMicrosecondLength() + " " + sequencer.getTickLength());
+            sequencer.setTickPosition(1100);
+            sequencer.setLoopStartPoint(1150);
+            sequencer.setLoopEndPoint(1920);
+            sequencer.setLoopCount(100);
+            sequencer.start();
+
+            // 1142
+
+
 
 
 
