@@ -2,6 +2,8 @@ package com.GlitchyDev;
 
 import com.GlitchyDev.GameStates.MainMenu;
 import com.GlitchyDev.IO.AssetLoader;
+import com.GlitchyDev.IO.SaveLoader;
+import com.GlitchyDev.Utility.GameController;
 import org.newdawn.slick.AppGameContainer;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.SlickException;
@@ -40,8 +42,12 @@ public class MMBN_Game extends StateBasedGame {
             AppGameContainer app = new AppGameContainer(new MMBN_Game("Megaman Battle Network Re:2"));
             app.setDisplayMode((int)(WIDTH * SCALE), (int)(HEIGHT * SCALE), false);
             app.setTargetFrameRate(FPS_TARGET);
-            app.setShowFPS(true);
+            app.setShowFPS(false);
             app.setAlwaysRender(true);
+
+            SaveLoader.loadSave();
+            GameController.linkControls(app);
+
             AssetLoader.setDefaultIconss(app,"GameAssets/Sprites/Pet_Icon/PET_1.png","GameAssets/Sprites/Pet_Icon/PET_3.png");
             app.start();
         } catch(SlickException e) {

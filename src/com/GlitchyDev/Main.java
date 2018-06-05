@@ -5,6 +5,7 @@ package com.GlitchyDev;
 import org.newdawn.slick.*;
 
 import javax.imageio.ImageIO;
+import javax.sound.midi.*;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -14,12 +15,29 @@ public class Main {
 
 
     public static void main(String[] args) {
-        File file = new File("GameAssets/Fonts/Thin_Special");
-        for(File letter : file.listFiles())
-        {
-            String name = letter.getName().replace(".png","");
-            String newName = name.replace("TS_","");
-            letter.renameTo(new File("GameAssets/Fonts/Thin_Special/" + newName + ".png"));
+        Synthesizer midiSynth = null;
+        try {
+            midiSynth = MidiSystem.getSynthesizer();
+            midiSynth.open();
+
+        } catch (MidiUnavailableException e) {
+            e.printStackTrace();
+        }
+
+        //get and load default instrument and channel lists
+        Instrument[] instr = midiSynth.getDefaultSoundbank().getInstruments();
+        MidiChannel[] mChannels = midiSynth.getChannels();
+
+        midiSynth.loadInstrument(instr[0]);//load an instrument
+
+
+        for(int i = 1; i < 1000; i = 2 * i) {
+            mChannels[0].noteOn(i, 100);//On channel 0, play note number 60 with velocity 100
+            try {
+                Thread.sleep(500); // wait time in milliseconds to control duration
+            } catch (InterruptedException e) {
+            }
+            mChannels[0].noteOff(60);//turn of the note
         }
 
     }
