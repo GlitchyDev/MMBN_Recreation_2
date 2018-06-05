@@ -2,26 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a1a4fe6-880b-49c4-a2a3-a355198e521c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/GameAssets/Sounds/SFX/Deselect.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAssets/Sounds/SFX/PressStart.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAssets/Sounds/SFX/SelectSave.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/Continue.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/ContinueG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/Cursor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/NewGame.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GameAssets/Sprites/MainMenuUIElements/NewGameG.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/GlitchyDev/IO/SaveLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/GlitchyDev/Utility/GButtons.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/GlitchyDev/Utility/GameController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DebugAssets/MMBN1.sf2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DebugAssets/song000.mid" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GameAssets/Sounds/SFX/JackIn.wav" beforeDir="false" afterPath="$PROJECT_DIR$/GameAssets/Sounds/BackgroundThemes/JackIn.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$MainMenuSubState.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu$MainMenuSubState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/GameStates/MainMenu.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/MMBN_Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/MMBN_Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/MMBN_Recreation_2/com/GlitchyDev/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -46,11 +30,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainMenu.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="185">
               <caret line="143" column="77" selection-start-line="143" selection-start-column="77" selection-end-line="143" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="124">
+              <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,9 +111,9 @@
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/Utility/KeyMapping.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/Utility/GBMapping.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/Utility/GameController.java" />
-        <option value="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java" />
         <option value="$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java" />
+        <option value="$PROJECT_DIR$/src/com/GlitchyDev/Main.java" />
       </list>
     </option>
   </component>
@@ -143,6 +139,11 @@
             <path>
               <item name="MMBN_Recreation_2" type="b2602c69:ProjectViewProjectNode" />
               <item name="MMBN_Recreation_2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MMBN_Recreation_2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MMBN_Recreation_2" type="462c0819:PsiDirectoryNode" />
+              <item name="DebugAssets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="MMBN_Recreation_2" type="b2602c69:ProjectViewProjectNode" />
@@ -232,11 +233,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\DebugAssets" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sounds\SFX" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sprites\MainMenuUIElements" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Sounds\BackgroundThemes" />
       <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets" />
-      <recent name="C:\Users\Rober\Desktop\control\Java Projects\MMBN_Recreation_2\GameAssets\Fonts\Thin_Uppercase" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.GlitchyDev.GameStates" />
@@ -261,7 +262,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MMBN_Game">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="MMBN_Game" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.GlitchyDev.MMBN_Game" />
       <module name="MMBN_Recreation_2" />
@@ -302,8 +303,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MMBN_Game" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.MMBN_Game" />
       </list>
     </recent_temporary>
   </component>
@@ -326,14 +327,14 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3290938" />
+      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3290938" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33704293" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.33704293" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -430,6 +431,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -464,6 +468,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -495,6 +502,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -512,6 +522,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -519,6 +532,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -587,13 +603,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/AssetLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -601,13 +610,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/SaveLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
         </state>
       </provider>
     </entry>
@@ -621,6 +623,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="143" column="77" selection-start-line="143" selection-start-column="77" selection-end-line="143" selection-end-column="77" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/IO/SaveLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="48" selection-start-line="3" selection-start-column="48" selection-end-line="3" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/MMBN_Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -631,10 +650,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/GameStates/MainMenu.java">
+    <entry file="file://$PROJECT_DIR$/src/com/GlitchyDev/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="143" column="77" selection-start-line="143" selection-start-column="77" selection-end-line="143" selection-end-column="77" />
+        <state relative-caret-position="124">
+          <caret line="63" column="7" selection-start-line="63" selection-start-column="7" selection-end-line="63" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

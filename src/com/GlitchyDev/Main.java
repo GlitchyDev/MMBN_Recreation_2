@@ -8,13 +8,14 @@ import javax.imageio.ImageIO;
 import javax.sound.midi.*;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.net.MalformedURLException;
 
 public class Main {
 
 
     public static void main(String[] args) {
+
         Synthesizer midiSynth = null;
         try {
             midiSynth = MidiSystem.getSynthesizer();
@@ -24,14 +25,59 @@ public class Main {
             e.printStackTrace();
         }
 
+        
+        midiSynth.unloadAllInstruments(midiSynth.getDefaultSoundbank());
+        try {
+            midiSynth.loadAllInstruments(MidiSystem.getSoundbank(new File( "DebugAssets/MMBN1.sf2" )));
+        } catch (InvalidMidiDataException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+
+        /*
         //get and load default instrument and channel lists
-        Instrument[] instr = midiSynth.getDefaultSoundbank().getInstruments();
+        Instrument[] instr = sbDefault.getInstruments();
+        int a = 0;
+        for(Instrument ins: instr)
+        {
+            System.out.println(ins.getName() + " " + a);
+            a++;
+        }
         MidiChannel[] mChannels = midiSynth.getChannels();
 
         midiSynth.loadInstrument(instr[0]);//load an instrument
+        */
+
+        Sequencer sequencer = null;
+        try {
+            sequencer = MidiSystem.getSequencer();
+
+        sequencer.open();
+        sequencer.getTransmitter().setReceiver(midiSynth.getReceiver());
+
+        InputStream inputStream = new BufferedInputStream(new FileInputStream(new File("DebugAssets/song000.mid")));
+        sequencer.setSequence(inputStream);
+        sequencer.start();
 
 
-        for(int i = 1; i < 1000; i = 2 * i) {
+
+
+
+        } catch (MidiUnavailableException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (InvalidMidiDataException e) {
+            e.printStackTrace();
+        }
+        /*
+
+        for(int i = 1; i < 100; i++) {
             mChannels[0].noteOn(i, 100);//On channel 0, play note number 60 with velocity 100
             try {
                 Thread.sleep(500); // wait time in milliseconds to control duration
@@ -39,6 +85,7 @@ public class Main {
             }
             mChannels[0].noteOff(60);//turn of the note
         }
+        */
 
     }
 }
