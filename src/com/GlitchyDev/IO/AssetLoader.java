@@ -58,6 +58,7 @@ public class AssetLoader {
                 Image spriteImage = null;
                 try {
                     spriteImage = new Image(sprite.getPath());
+                    spriteImage.setFilter(Image.FILTER_NEAREST);
                 } catch (SlickException e) {
 
                 }

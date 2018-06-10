@@ -54,7 +54,7 @@ public class DebugGameState extends BasicGameState {
     }
 
     @Override
-    public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
+    public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) {
         if(Math.random() < 0.01)
         {
             stateBasedGame.enterState(GameStateType.DEBUG_2.ordinal());

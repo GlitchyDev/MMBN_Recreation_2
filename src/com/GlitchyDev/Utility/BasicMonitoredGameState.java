@@ -33,23 +33,23 @@ public abstract class BasicMonitoredGameState extends BasicGameState {
         updateUtilization = (100.0/(1000.0/MMBN_Game.FPS_TARGET))* length;
     }
 
-    public abstract void doRender(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException;
-    public abstract void doUpdate(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException;
+    protected abstract void doRender(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) throws SlickException;
+    protected abstract void doUpdate(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException;
 
 
 
 
-    public double getRenderingUtilization()
+    protected double getRenderingUtilization()
     {
         return renderingUtilization;
     }
 
-    public double getUpdateUtilization()
+    protected double getUpdateUtilization()
     {
         return updateUtilization;
     }
 
-    public double getTotalUtilization()
+    protected double getTotalUtilization()
     {
         return (renderingUtilization+updateUtilization);
     }

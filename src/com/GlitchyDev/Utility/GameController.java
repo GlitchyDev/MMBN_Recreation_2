@@ -29,7 +29,7 @@ public class GameController {
         controllerMapping.put(GButtons.UP,Input.KEY_UP);
         controllerMapping.put(GButtons.LEFT,Input.KEY_LEFT);
         controllerMapping.put(GButtons.DOWN,Input.KEY_DOWN);
-        controllerMapping.put(GButtons.RIGHT,Input.KEY_UP);
+        controllerMapping.put(GButtons.RIGHT,Input.KEY_RIGHT);
     }
 
     public static boolean isButtonPressed(GButtons button)
