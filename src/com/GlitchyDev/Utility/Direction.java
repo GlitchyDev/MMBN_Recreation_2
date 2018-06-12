@@ -1,12 +1,12 @@
 package com.GlitchyDev.Utility;
 
+import java.util.ArrayList;
+
 public enum Direction {
     NORTH,
     EAST,
     SOUTH,
     WEST;
-
-
 
     public Direction reverse()
     {
@@ -23,6 +23,8 @@ public enum Direction {
         }
         return NORTH;
     }
+
+
 
 
 

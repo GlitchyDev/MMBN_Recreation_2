@@ -49,6 +49,7 @@ public class MMBN_Game extends StateBasedGame {
             SaveLoader.loadSave();
             GameController.linkControls(app);
 
+
             AssetLoader.setDefaultIconss(app,"GameAssets/Sprites/Pet_Icon/PET_1.png","GameAssets/Sprites/Pet_Icon/PET_3.png");
             app.start();
         } catch(SlickException e) {

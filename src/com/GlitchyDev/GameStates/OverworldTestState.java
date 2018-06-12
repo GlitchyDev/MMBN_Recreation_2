@@ -12,6 +12,119 @@ import org.newdawn.slick.state.StateBasedGame;
 
 import java.util.ArrayList;
 
+
+public class OverworldTestState extends BasicMonitoredGameState {
+    private int x = 0;
+    private int y = 0;
+    private final long startingValue = -1;
+    private final int cacheInputDelay = 3;
+    private ArrayList<long[]> cachedInputs = new ArrayList<>();
+    private long[] inputMapping = new long[]{startingValue,startingValue,startingValue,startingValue};
+
+
+    /*
+    private long frameCount = 0;
+    private ArrayList<Direction> inputBuffer = new ArrayList<>();
+    private boolean isMoving = false;
+    private int stateFrameCount = 0;
+    */
+
+    @Override
+    public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) {
+
+    }
+
+    @Override
+    public void doRender(GameContainer gameContainer, StateBasedGame stateBasedGame, Graphics graphics) {
+
+        graphics.setBackground(new Color(1.0f/256*64, 1.0f/256*16, 1.0f/256*80,1.0f));
+        SpriteUtil.drawSprite("Lans_Bedroom",-x + MMBN_Game.WIDTH/2, -y + MMBN_Game.HEIGHT/2,1.0f);
+
+        drawLan();
+
+        graphics.setColor(Color.red);
+        int i = 0;
+        for(long l: cachedInputs.get(0))
+        {
+            graphics.drawString(String.valueOf(l),0,i*10);
+            i++;
+        }
+
+
+    }
+
+    public void drawLan() {
+
+
+
+    }
+
+    @Override
+    public void doUpdate(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) {
+
+        for(GButtons button: GButtons.getDirections()) {
+
+            if (inputMapping[button.ordinal()] == startingValue) {
+                if(GameController.isButtonPressed(button))
+                {
+                    inputMapping[button.ordinal()] = 0;
+                }
+            }
+            else
+            {
+                switch(button.getEquivalent())
+                {
+                    case NORTH:
+                    case WEST:
+                        if(GameController.isButtonDown(button)) {
+                            inputMapping[button.ordinal()]++;
+                            if(inputMapping[button.getReverse().ordinal()] > 0) {
+                                inputMapping[button.getReverse().ordinal()] = 0;
+                            }
+                        }
+                        else {
+                            inputMapping[button.ordinal()] = startingValue;
+                        }
+                        break;
+                        // Can be overruled by above
+                    case EAST:
+                    case SOUTH:
+                        if(GameController.isButtonDown(button)) {
+                            if(inputMapping[button.getReverse().ordinal()] == startingValue)
+                            {
+                                inputMapping[button.ordinal()]++;
+                            }
+                        }
+                        else {
+                            inputMapping[button.ordinal()] = startingValue;
+                        }
+                        break;
+                }
+            }
+
+        }
+
+        cachedInputs.add(inputMapping.clone());
+
+        // You can access input index 0 at any point before now, its removed after here
+
+
+        if(cachedInputs.size() > cacheInputDelay)
+        {
+            cachedInputs.remove(0);
+        }
+
+    }
+
+    @Override
+    public int getID() {
+        return GameStateType.OVERWORLD.ordinal();
+    }
+
+
+}
+
+/*
 public class OverworldTestState extends BasicMonitoredGameState {
     private int x;
     private int y;
@@ -193,3 +306,5 @@ public class OverworldTestState extends BasicMonitoredGameState {
 
 
 }
+
+ */
