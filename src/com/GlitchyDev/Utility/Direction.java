@@ -25,10 +25,41 @@ public enum Direction {
                 return NORTH;
             case WEST:
                 return EAST;
+            case NORTHEAST:
+                return SOUTHWEST;
+            case NORTHWEST:
+                return SOUTHEAST;
+            case SOUTHEAST:
+                return NORTHWEST;
+            case SOUTHWEST:
+                return NORTHEAST;
         }
-        return NORTH;
+        return NONE;
     }
 
+    public Direction mirror()
+    {
+        switch(this)
+        {
+            case NORTH:
+                return NORTH;
+            case EAST:
+                return WEST;
+            case SOUTH:
+                return SOUTH;
+            case WEST:
+                return EAST;
+            case NORTHEAST:
+                return NORTHWEST;
+            case NORTHWEST:
+                return NORTHEAST;
+            case SOUTHEAST:
+                return SOUTHWEST;
+            case SOUTHWEST:
+                return SOUTHEAST;
+        }
+        return NONE;
+    }
 
     @Override
     public String toString() {
@@ -51,7 +82,25 @@ public enum Direction {
             case SOUTHWEST:
                 return "SouthWest";
         }
-        return "NONE";
+        return "None";
+    }
+
+    public boolean requiresFlip()
+    {
+        switch(this)
+        {
+            case NORTH:
+            case SOUTH:
+            case EAST:
+            case NORTHEAST:
+            case SOUTHEAST:
+                return false;
+            case WEST:
+            case NORTHWEST:
+            case SOUTHWEST:
+                return true;
+        }
+        return false;
     }
 
     public static Direction getDirection(long[] controlMapping)
@@ -98,6 +147,32 @@ public enum Direction {
             }
         }
 
+    }
+
+    public long getDirectionValue(long[] inputMapping)
+    {
+        switch(this)
+        {
+            case NORTH:
+                return inputMapping[0];
+            case EAST:
+                return inputMapping[1];
+            case SOUTH:
+                return inputMapping[2];
+            case WEST:
+                return inputMapping[3];
+            case NORTHEAST:
+                return inputMapping[0] > inputMapping[1] ? inputMapping[0] : inputMapping[1];
+            case NORTHWEST:
+                return inputMapping[0] > inputMapping[3] ? inputMapping[0] : inputMapping[3];
+            case SOUTHEAST:
+                return inputMapping[2] > inputMapping[1] ? inputMapping[2] : inputMapping[1];
+            case SOUTHWEST:
+                return inputMapping[2] > inputMapping[3] ? inputMapping[2] : inputMapping[3];
+            case NONE:
+            default:
+                return 0;
+        }
     }
 
 }

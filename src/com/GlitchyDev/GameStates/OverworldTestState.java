@@ -1,13 +1,10 @@
 package com.GlitchyDev.GameStates;
 
-import com.GlitchyDev.IO.AssetLoader;
-import com.GlitchyDev.IO.SaveLoader;
 import com.GlitchyDev.MMBN_Game;
 import com.GlitchyDev.Utility.*;
 import org.newdawn.slick.Color;
 import org.newdawn.slick.GameContainer;
 import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
 import org.newdawn.slick.state.StateBasedGame;
 
 import java.util.ArrayList;
@@ -50,8 +47,25 @@ public class OverworldTestState extends BasicMonitoredGameState {
 
     }
 
-    public void drawLan() {
 
+    private Direction previousDirection = Direction.NORTH;
+    public void drawLan() {
+        Direction direction = Direction.getDirection(inputMapping);
+        if(direction == Direction.NONE)
+        {
+            direction = previousDirection;
+        }
+        Direction displayDirection = direction;
+        boolean flip = false;
+        if(direction.requiresFlip())
+        {
+            displayDirection = direction.mirror();
+            flip = true;
+        }
+        previousDirection = direction;
+
+
+        SpriteUtil.drawBottemCenteredSprite("Lan_Walking_" + displayDirection + "_" + direction.getDirectionValue(inputMapping) % 36/6, -x + MMBN_Game.WIDTH / 2, -y + MMBN_Game.HEIGHT / 2 + 5, 1.0f,flip);
 
     }
 
@@ -80,10 +94,12 @@ public class OverworldTestState extends BasicMonitoredGameState {
     @Override
     public void doUpdate(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) {
 
+        /*
         if(GameController.isButtonPressed(GButtons.DEBUG)) {
             pollInputs();
         }
-
+        */
+        pollInputs();
 
 
     }
@@ -161,6 +177,8 @@ public class OverworldTestState extends BasicMonitoredGameState {
 
         // You can access input index 0 at any point before now, its removed after here
     }
+
+
 
     @Override
     public int getID() {
