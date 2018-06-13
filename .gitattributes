@@ -1,5 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 out/
-.iml 
+.idea/
+.iml
+.class
 gradle.xml
