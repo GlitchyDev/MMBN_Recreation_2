@@ -2,6 +2,6 @@
 * text=auto
 out/
 .idea/
-.iml
-.class
-.xml
+*.iml
+*.class
+*.xml
