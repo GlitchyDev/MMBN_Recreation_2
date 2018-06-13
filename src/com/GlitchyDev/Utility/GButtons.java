@@ -10,24 +10,9 @@ public enum GButtons {
     START,
     SELECT,
     L,
-    R;
+    R,
+    DEBUG;
 
-
-    public Direction getEquivalent()
-    {
-        switch(this)
-        {
-            case UP:
-                return Direction.NORTH;
-            case RIGHT:
-                return Direction.EAST;
-            case DOWN:
-                return Direction.SOUTH;
-            case LEFT:
-                return Direction.WEST;
-        }
-        return Direction.NORTH;
-    }
 
     public GButtons getReverse()
     {
@@ -44,7 +29,6 @@ public enum GButtons {
         }
         return null;
     }
-
 
     public static GButtons[] getDirections()
     {
