@@ -2,14 +2,11 @@ package com.GlitchyDev.GameStates;
 
 import com.GlitchyDev.IO.AssetLoader;
 import com.GlitchyDev.IO.SaveLoader;
-import com.GlitchyDev.Utility.SpriteUtil;
-import com.GlitchyDev.Utility.BasicMonitoredGameState;
-import com.GlitchyDev.Utility.GButtons;
-import com.GlitchyDev.Utility.GameController;
+import com.GlitchyDev.Utility.*;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.StateBasedGame;
 
-public class MainMenu extends BasicMonitoredGameState {
+public class MainMenu extends ControllerGameState {
     private GameContainer container;
     private long lastStateChange = 0;
     private MainMenuSubState currentSubState;
@@ -29,6 +26,8 @@ public class MainMenu extends BasicMonitoredGameState {
 
     @Override
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) {
+        super.init(gameContainer,stateBasedGame);
+
         lastStateChange = gameContainer.getTime();
         currentSubState = MainMenuSubState.CAPCOM_FADEIN;
         this.container = gameContainer;
@@ -102,7 +101,7 @@ public class MainMenu extends BasicMonitoredGameState {
                 drawScreenFadeOut(16,graphics);
                 break;
         }
-
+        drawDebugInputMapping(graphics);
         /*
         graphics.setColor(Color.red);
         graphics.drawString(currentSubState.name() + " " + getTotalUtilization(),80,10);
@@ -200,8 +199,7 @@ public class MainMenu extends BasicMonitoredGameState {
 
                     pressStartControlerCoolDown++;
 
-                    if(GameController.isButtonPressed(GButtons.START) && pressStartControlerCoolDown >= 40)
-                    {
+                    if(inputMapping[GButtons.START.ordinal()] == 1 && pressStartControlerCoolDown >= 40) {
                         currentSubState = MainMenuSubState.SAVE_STATE;
                         saveFrameCount = -3;
                         AssetLoader.getSound("PressStart").play(1.0f,0.8f);
@@ -217,7 +215,7 @@ public class MainMenu extends BasicMonitoredGameState {
                     saveFrameCount++;
 
                     boolean inputUsed = false;
-                    if(GameController.isButtonPressed(GButtons.UP) && SaveLoader.doesSaveExists())
+                    if(inputMapping[GButtons.UP.ordinal()] == 1 && SaveLoader.doesSaveExists())
                     {
                         if(cursorPosition == 1)
                         {
@@ -227,7 +225,7 @@ public class MainMenu extends BasicMonitoredGameState {
                             AssetLoader.getSound("SwitchOptions").play(1.0f,1.0f);
                         }
                     }
-                    if(GameController.isButtonPressed(GButtons.DOWN) && !inputUsed && SaveLoader.doesSaveExists())
+                    if(inputMapping[GButtons.DOWN.ordinal()] == 1 && !inputUsed && SaveLoader.doesSaveExists())
                     {
                         if(cursorPosition == 0)
                         {
@@ -237,7 +235,7 @@ public class MainMenu extends BasicMonitoredGameState {
                             AssetLoader.getSound("SwitchOptions").play(1.0f,1.0f);
                         }
                     }
-                    if(GameController.isButtonPressed(GButtons.A) || GameController.isButtonPressed(GButtons.START) && !inputUsed)
+                    if(inputMapping[GButtons.A.ordinal()] == 1 || GameController.isButtonPressed(GButtons.START) && !inputUsed)
                     {
                         // Exit into new game or save game
 
@@ -247,12 +245,11 @@ public class MainMenu extends BasicMonitoredGameState {
                         currentSubState = MainMenuSubState.SAVE_SELECTED;
                         lastStateChange = gameContainer.getTime();
                     }
-                    if(GameController.isButtonPressed(GButtons.B) && !inputUsed)
+                    if(inputMapping[GButtons.B.ordinal()] == 1 && !inputUsed)
                     {
                         currentSubState = MainMenuSubState.PRESS_START;
                         AssetLoader.getSound("Deselect").play(1.0f,0.8f);
                     }
-
                     break;
                 case SAVE_STATE_FADEOUT:
                     updateBackground();
