@@ -9,13 +9,13 @@ import org.newdawn.slick.state.StateBasedGame;
 
 import java.util.ArrayList;
 
-public abstract class ControllerGameState extends BasicMonitoredGameState {
+public abstract class BasicControllerGameState extends BasicMonitoredGameState {
 
     protected final long startingValue = -2;
     protected final long enabledValue = -1;
     private final int cacheInputDelay = 3;
-    protected ArrayList<long[]> cachedInputs = new ArrayList<>();
-    protected long[] inputMapping;
+    private ArrayList<long[]> cachedInputs = new ArrayList<>();
+    private long[] inputMapping;
 
 
     @Override

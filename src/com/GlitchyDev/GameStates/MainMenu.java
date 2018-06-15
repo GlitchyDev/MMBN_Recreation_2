@@ -6,7 +6,7 @@ import com.GlitchyDev.Utility.*;
 import org.newdawn.slick.*;
 import org.newdawn.slick.state.StateBasedGame;
 
-public class MainMenu extends ControllerGameState {
+public class MainMenu extends BasicControllerGameState {
     private GameContainer container;
     private long lastStateChange = 0;
     private MainMenuSubState currentSubState;
@@ -101,7 +101,7 @@ public class MainMenu extends ControllerGameState {
                 drawScreenFadeOut(16,graphics);
                 break;
         }
-        drawDebugInputMapping(graphics);
+        //drawDebugInputMapping(graphics);
         /*
         graphics.setColor(Color.red);
         graphics.drawString(currentSubState.name() + " " + getTotalUtilization(),80,10);
@@ -199,7 +199,7 @@ public class MainMenu extends ControllerGameState {
 
                     pressStartControlerCoolDown++;
 
-                    if(inputMapping[GButtons.START.ordinal()] == 1 && pressStartControlerCoolDown >= 40) {
+                    if(getCurrentInputMapping()[GButtons.START.ordinal()] == 1 && pressStartControlerCoolDown >= 40) {
                         currentSubState = MainMenuSubState.SAVE_STATE;
                         saveFrameCount = -3;
                         AssetLoader.getSound("PressStart").play(1.0f,0.8f);
@@ -215,7 +215,7 @@ public class MainMenu extends ControllerGameState {
                     saveFrameCount++;
 
                     boolean inputUsed = false;
-                    if(inputMapping[GButtons.UP.ordinal()] == 1 && SaveLoader.doesSaveExists())
+                    if(getCurrentInputMapping()[GButtons.UP.ordinal()] == 1 && SaveLoader.doesSaveExists())
                     {
                         if(cursorPosition == 1)
                         {
@@ -225,7 +225,7 @@ public class MainMenu extends ControllerGameState {
                             AssetLoader.getSound("SwitchOptions").play(1.0f,1.0f);
                         }
                     }
-                    if(inputMapping[GButtons.DOWN.ordinal()] == 1 && !inputUsed && SaveLoader.doesSaveExists())
+                    if(getCurrentInputMapping()[GButtons.DOWN.ordinal()] == 1 && !inputUsed && SaveLoader.doesSaveExists())
                     {
                         if(cursorPosition == 0)
                         {
@@ -235,17 +235,16 @@ public class MainMenu extends ControllerGameState {
                             AssetLoader.getSound("SwitchOptions").play(1.0f,1.0f);
                         }
                     }
-                    if(inputMapping[GButtons.A.ordinal()] == 1 || GameController.isButtonPressed(GButtons.START) && !inputUsed)
+                    if(getCurrentInputMapping()[GButtons.A.ordinal()] == 1 || getCurrentInputMapping()[GButtons.START.ordinal()] == 1 && !inputUsed)
                     {
                         // Exit into new game or save game
-
                         inputUsed = true;
                         AssetLoader.getSound("SelectSave").play(1.0f,1.0f);
                         AssetLoader.getSound("MainMenu_Theme").stop();
                         currentSubState = MainMenuSubState.SAVE_SELECTED;
                         lastStateChange = gameContainer.getTime();
                     }
-                    if(inputMapping[GButtons.B.ordinal()] == 1 && !inputUsed)
+                    if(getCurrentInputMapping()[GButtons.B.ordinal()] == 1 && !inputUsed)
                     {
                         currentSubState = MainMenuSubState.PRESS_START;
                         AssetLoader.getSound("Deselect").play(1.0f,0.8f);

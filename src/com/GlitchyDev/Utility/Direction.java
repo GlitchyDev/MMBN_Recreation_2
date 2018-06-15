@@ -175,4 +175,52 @@ public enum Direction {
         }
     }
 
+    public int getX(){
+        switch(this)
+        {
+            case NORTH:
+                return 0;
+            case EAST:
+                return 1;
+            case SOUTH:
+                return 0;
+            case WEST:
+                return -1;
+            case NORTHEAST:
+                return 1;
+            case NORTHWEST:
+                return -1;
+            case SOUTHEAST:
+                return 1;
+            case SOUTHWEST:
+                return -1;
+            default:
+                return 0;
+        }
+    }
+
+    public int getY() {
+        switch(this)
+        {
+            case NORTH:
+                return -1;
+            case EAST:
+                return 0;
+            case SOUTH:
+                return 1;
+            case WEST:
+                return 0;
+            case NORTHEAST:
+                return -1;
+            case NORTHWEST:
+                return -1;
+            case SOUTHEAST:
+                return 1;
+            case SOUTHWEST:
+                return 1;
+            default:
+                return 0;
+        }
+    }
+
 }
