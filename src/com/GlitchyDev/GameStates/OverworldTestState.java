@@ -10,13 +10,14 @@ import org.newdawn.slick.state.StateBasedGame;
 
 
 public class OverworldTestState extends BasicControllerGameState {
-    protected int x = 0;
-    protected int y = 0;
+    protected int x = 80;
+    protected int y = 120;
     protected boolean isMoving = false;
     protected boolean isRunning = false;
     protected Direction previousDirection = Direction.SOUTH;
     protected Direction currentDirection = Direction.SOUTH;
 
+    private final int playerHeightOffset = 8;
 
 
     @Override
@@ -33,15 +34,16 @@ public class OverworldTestState extends BasicControllerGameState {
         graphics.fillRect(0, 0, gameContainer.getWidth(), gameContainer.getHeight());
 
 
-        SpriteUtil.drawSprite("Lans_Bedroom", -x + MMBN_Game.WIDTH / 2, -y + MMBN_Game.HEIGHT / 2, 1.0f);
+        SpriteUtil.drawSprite("Lans_Bedroom", -x + MMBN_Game.WIDTH / 2, -y + MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f);
 
         drawLan();
 
-        SpriteUtil.drawSprite("Lans_Bedroom_Collision", -x + MMBN_Game.WIDTH / 2, -y + MMBN_Game.HEIGHT / 2, 1.0f);
+        SpriteUtil.drawSprite("Lans_Bedroom_Collision", -x + MMBN_Game.WIDTH / 2, -y + MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f);
 
         showCollisions();
 
-
+        graphics.setColor(Color.green);
+        graphics.drawString("X :" + x + " Y: " + y,300,0);
 
 
     }
@@ -65,17 +67,17 @@ public class OverworldTestState extends BasicControllerGameState {
         if(isMoving) {
              if(isRunning) {
                  SpriteUtil.drawBottemCenteredSprite("Shadow_" + direction.getDirectionValue(getCurrentInputMapping()) % 18/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 7, 1.0f,flip);
-                 SpriteUtil.drawBottemCenteredSprite("Lan_Running_" + displayDirection + "_" + direction.getDirectionValue(getCurrentInputMapping()) % 48/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 7, 1.0f,flip);
+                 SpriteUtil.drawBottemCenteredSprite("Lan_Running_" + displayDirection + "_" + direction.getDirectionValue(getCurrentInputMapping()) % 48/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f,flip);
              }
              else {
                  SpriteUtil.drawBottemCenteredSprite("Shadow_" + direction.getDirectionValue(getCurrentInputMapping()) % 18/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 8, 1.0f,flip);
-                 SpriteUtil.drawBottemCenteredSprite("Lan_Walking_" + displayDirection + "_" + direction.getDirectionValue(getCurrentInputMapping()) % 36/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 8, 1.0f,flip);
+                 SpriteUtil.drawBottemCenteredSprite("Lan_Walking_" + displayDirection + "_" + direction.getDirectionValue(getCurrentInputMapping()) % 36/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f,flip);
              }
          }
          else {
              // 39 pixels tall
             SpriteUtil.drawBottemCenteredSprite("Shadow_2", MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 8, 1.0f,flip);
-            SpriteUtil.drawBottemCenteredSprite("Lan_Standing_" + displayDirection, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 8, 1.0f,flip);
+            SpriteUtil.drawBottemCenteredSprite("Lan_Standing_" + displayDirection, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f,flip);
          }
 
     }
@@ -89,134 +91,105 @@ public class OverworldTestState extends BasicControllerGameState {
         isMoving = currentDirection != Direction.NONE;
         isRunning = getCurrentInputMapping()[GButtons.B.ordinal()] >= 1;
 
-
         handleMovement();
 
     }
 
-    public void handleMovement()
-    {
-        if(currentDirection.getDirectionValue(getCurrentInputMapping()) > 1) {
+    public void handleMovement() {
+
+        if (currentDirection.getDirectionValue(getCurrentInputMapping()) > 1) {
             switch (currentDirection) {
                 case NORTH:
-                    y -= isRunning ? 2 : 1;
-                    if (y < 0) {
-                        y = 0;
-                    }
-                    break;
                 case EAST:
-                    x += isRunning ? 2 : 1;
-                    if (x > AssetLoader.getSprite("Lans_Bedroom").getWidth()) {
-                        x = AssetLoader.getSprite("Lans_Bedroom").getWidth();
-                    }
-                    break;
                 case SOUTH:
-                    y += isRunning ? 2 : 1;
-                    if (y > AssetLoader.getSprite("Lans_Bedroom").getHeight()) {
-                        y = AssetLoader.getSprite("Lans_Bedroom").getHeight();
-                    }
-                    break;
                 case WEST:
-                    x -= isRunning ? 2 : 1;
-                    if (x < 0) {
-                        x = 0;
+                    x += currentDirection.getX() * (isRunning ? 2 : 1);
+                    y += currentDirection.getY() * (isRunning ? 2 : 1);
+                    correctExitBounds();
+                    if(detectCollisions())
+                    {
+                        x -= currentDirection.getX() * (isRunning ? 2 : 1);
+                        y -= currentDirection.getY() * (isRunning ? 2 : 1);
                     }
                     break;
                 case NORTHEAST:
-                    if (isRunning) {
-                        x += 2;
-                        if (x > AssetLoader.getSprite("Lans_Bedroom").getWidth()) {
-                            x = AssetLoader.getSprite("Lans_Bedroom").getWidth();
-                        }
-                        y -= 1;
-                        if (y < 0) {
-                            y = 0;
-                        }
-                    } else {
-                        if (currentDirection.getDirectionValue(getCurrentInputMapping()) % 2 == 0) {
-                            x += 2;
-                            if (x > AssetLoader.getSprite("Lans_Bedroom").getWidth()) {
-                                x = AssetLoader.getSprite("Lans_Bedroom").getWidth();
-                            }
-                            y -= 1;
-                            if (y < 0) {
-                                y = 0;
-                            }
-                        }
-                    }
-                    break;
                 case NORTHWEST:
-                    if (isRunning) {
-                        x -= 2;
-                        if (x < 0) {
-                            x = AssetLoader.getSprite("Lans_Bedroom").getWidth();
-                        }
-                        y -= 1;
-                        if (y < 0) {
-                            y = 0;
-                        }
-                    } else {
-                        if (currentDirection.getDirectionValue(getCurrentInputMapping()) % 2 == 0) {
-                            x -= 2;
-                            if (x < 0) {
-                                x = AssetLoader.getSprite("Lans_Bedroom").getWidth();
-                            }
-                            y -= 1;
-                            if (y < 0) {
-                                y = 0;
-                            }
-                        }
-                    }
-                    break;
                 case SOUTHEAST:
-                    if (isRunning) {
-                        x += 2;
-                        if (x > AssetLoader.getSprite("Lans_Bedroom").getWidth()) {
-                            x = AssetLoader.getSprite("Lans_Bedroom").getWidth();
-                        }
-                        y += 1;
-                        if (y > AssetLoader.getSprite("Lans_Bedroom").getHeight()) {
-                            y = AssetLoader.getSprite("Lans_Bedroom").getHeight();
-                        }
-                    } else {
-                        if (currentDirection.getDirectionValue(getCurrentInputMapping()) % 2 == 0) {
-                            x += 2;
-                            if (x > AssetLoader.getSprite("Lans_Bedroom").getWidth()) {
-                                x = AssetLoader.getSprite("Lans_Bedroom").getWidth();
-                            }
-                            y += 1;
-                            if (y > AssetLoader.getSprite("Lans_Bedroom").getHeight()) {
-                                y = AssetLoader.getSprite("Lans_Bedroom").getHeight();
-                            }
-                        }
-                    }
-                    break;
                 case SOUTHWEST:
-                    if (isRunning) {
-                        x -= 2;
-                        if (x < 0) {
-                            x = 0;
-                        }
-                        y += 1;
-                        if (y > AssetLoader.getSprite("Lans_Bedroom").getHeight()) {
-                            y = AssetLoader.getSprite("Lans_Bedroom").getHeight();
-                        }
-                    } else {
-                        if (currentDirection.getDirectionValue(getCurrentInputMapping()) % 2 == 0) {
-                            x -= 2;
-                            if (x < 0) {
-                                x = 0;
-                            }
-                            y += 1;
-                            if (y > AssetLoader.getSprite("Lans_Bedroom").getHeight()) {
-                                y = AssetLoader.getSprite("Lans_Bedroom").getHeight();
-                            }
-                        }
+                    if (isRunning || (currentDirection.getDirectionValue(getCurrentInputMapping()) - 1) % 2 == 0) {
+                        x += currentDirection.getX();
+                        y += currentDirection.getY();
+                    }
+                    correctExitBounds();
+                    if(detectCollisions())
+                    {
+                        x -= currentDirection.getX();
+                        y -= currentDirection.getY();
                     }
                     break;
+                default:
             }
         }
+
     }
+
+
+    public void correctExitBounds() {
+        x = x < 0 ? 0 : x;
+        y = y < 0 ? 0 : y;
+        x = x > AssetLoader.getSprite("Lans_Bedroom").getWidth() ? AssetLoader.getSprite("Lans_Bedroom").getWidth() : x;
+        y = y > AssetLoader.getSprite("Lans_Bedroom").getHeight() ? AssetLoader.getSprite("Lans_Bedroom").getHeight() : y;
+    }
+
+    public boolean detectCollisions()
+    {
+        if(getCurrentInputMapping()[GButtons.R.ordinal()] >= 1) {
+
+        }
+        else
+        {
+            switch(currentDirection)
+            {
+                case NORTH:
+                case EAST:
+                case SOUTH:
+                case WEST:
+                case NORTHEAST:
+                case NORTHWEST:
+                case SOUTHEAST:
+                case SOUTHWEST:
+                    break;
+                default:
+            }
+        }
+
+        return false;
+        /*
+        if(getCurrentInputMapping()[GButtons.R.ordinal()] >= 1) {
+            return false;
+        }
+        return AssetLoader.getSprite("Lans_Bedroom_Collision").getColor(x,y).a != 0.0f;
+        */
+    }
+
+    public float getGridSection(Direction direction, int x, int y)
+    {
+        switch(currentDirection)
+        {
+            case NORTH:
+                return AssetLoader.getSprite("Lans_Bedroom_Collision").getColor(x,y-1).a;
+            case EAST:
+            case SOUTH:
+            case WEST:
+            case NORTHEAST:
+            case NORTHWEST:
+            case SOUTHEAST:
+            case SOUTHWEST:
+                break;
+            default:
+        }    }
+
+
 
 
     public void showCollisions()

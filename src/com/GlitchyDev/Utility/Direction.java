@@ -187,13 +187,13 @@ public enum Direction {
             case WEST:
                 return -1;
             case NORTHEAST:
-                return 1;
+                return 2;
             case NORTHWEST:
-                return -1;
+                return -2;
             case SOUTHEAST:
-                return 1;
+                return 2;
             case SOUTHWEST:
-                return -1;
+                return -2;
             default:
                 return 0;
         }
