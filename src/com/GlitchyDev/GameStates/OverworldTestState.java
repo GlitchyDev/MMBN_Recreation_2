@@ -17,7 +17,7 @@ public class OverworldTestState extends BasicControllerGameState {
     protected Direction previousDirection = Direction.SOUTH;
     protected Direction currentDirection = Direction.SOUTH;
 
-    private final int playerHeightOffset = 8;
+    private final int playerHeightOffset = 6;
 
 
     @Override
@@ -45,6 +45,9 @@ public class OverworldTestState extends BasicControllerGameState {
         graphics.setColor(Color.green);
         graphics.drawString("X :" + x + " Y: " + y,300,0);
 
+        graphics.setColor(Color.pink);
+        graphics.drawRect(gameContainer.getWidth()/2, gameContainer.getHeight()/2 + playerHeightOffset * MMBN_Game.SCALE,1,1);
+
 
     }
 
@@ -66,18 +69,18 @@ public class OverworldTestState extends BasicControllerGameState {
 
         if(isMoving) {
              if(isRunning) {
-                 SpriteUtil.drawBottemCenteredSprite("Shadow_" + direction.getDirectionValue(getCurrentInputMapping()) % 18/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 7, 1.0f,flip);
-                 SpriteUtil.drawBottemCenteredSprite("Lan_Running_" + displayDirection + "_" + direction.getDirectionValue(getCurrentInputMapping()) % 48/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f,flip);
+                 SpriteUtil.drawBottemCenteredSprite("Shadow_" + direction.getDirectionValue(getCurrentInputMapping()) % 18/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset - 1, 1.0f,flip);
+                 SpriteUtil.drawBottemCenteredSprite("Lan_Running_" + displayDirection + "_" + (direction.getDirectionValue(getCurrentInputMapping()) - 1) % 48/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset + 1, 1.0f,flip);
              }
              else {
-                 SpriteUtil.drawBottemCenteredSprite("Shadow_" + direction.getDirectionValue(getCurrentInputMapping()) % 18/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 8, 1.0f,flip);
-                 SpriteUtil.drawBottemCenteredSprite("Lan_Walking_" + displayDirection + "_" + direction.getDirectionValue(getCurrentInputMapping()) % 36/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f,flip);
+                 SpriteUtil.drawBottemCenteredSprite("Shadow_" + direction.getDirectionValue(getCurrentInputMapping()) % 18/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f,flip);
+                 SpriteUtil.drawBottemCenteredSprite("Lan_Walking_" + displayDirection + "_" + (direction.getDirectionValue(getCurrentInputMapping()) - 1) % 36/6, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset + 1, 1.0f,flip);
              }
          }
          else {
              // 39 pixels tall
-            SpriteUtil.drawBottemCenteredSprite("Shadow_2", MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + 8, 1.0f,flip);
-            SpriteUtil.drawBottemCenteredSprite("Lan_Standing_" + displayDirection, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f,flip);
+            SpriteUtil.drawBottemCenteredSprite("Shadow_2", MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset, 1.0f,flip);
+            SpriteUtil.drawBottemCenteredSprite("Lan_Standing_" + displayDirection, MMBN_Game.WIDTH / 2, MMBN_Game.HEIGHT / 2 + playerHeightOffset + 1, 1.0f,flip);
          }
 
     }
@@ -96,98 +99,200 @@ public class OverworldTestState extends BasicControllerGameState {
     }
 
     public void handleMovement() {
+        final int oldX = x;
+        final int oldY = y;
 
-        if (currentDirection.getDirectionValue(getCurrentInputMapping()) > 1) {
-            switch (currentDirection) {
-                case NORTH:
-                case EAST:
-                case SOUTH:
-                case WEST:
-                    x += currentDirection.getX() * (isRunning ? 2 : 1);
-                    y += currentDirection.getY() * (isRunning ? 2 : 1);
-                    correctExitBounds();
-                    if(detectCollisions())
-                    {
-                        x -= currentDirection.getX() * (isRunning ? 2 : 1);
-                        y -= currentDirection.getY() * (isRunning ? 2 : 1);
-                    }
-                    break;
-                case NORTHEAST:
-                case NORTHWEST:
-                case SOUTHEAST:
-                case SOUTHWEST:
-                    if (isRunning || (currentDirection.getDirectionValue(getCurrentInputMapping()) - 1) % 2 == 0) {
-                        x += currentDirection.getX();
-                        y += currentDirection.getY();
-                    }
-                    correctExitBounds();
-                    if(detectCollisions())
-                    {
-                        x -= currentDirection.getX();
-                        y -= currentDirection.getY();
-                    }
-                    break;
-                default:
-            }
-        }
-
-    }
-
-
-    public void correctExitBounds() {
-        x = x < 0 ? 0 : x;
-        y = y < 0 ? 0 : y;
-        x = x > AssetLoader.getSprite("Lans_Bedroom").getWidth() ? AssetLoader.getSprite("Lans_Bedroom").getWidth() : x;
-        y = y > AssetLoader.getSprite("Lans_Bedroom").getHeight() ? AssetLoader.getSprite("Lans_Bedroom").getHeight() : y;
-    }
-
-    public boolean detectCollisions()
-    {
-        if(getCurrentInputMapping()[GButtons.R.ordinal()] >= 1) {
-
+        if(!currentDirection.isDiagnal())
+        {
+            x = getCurrentInputMapping()[GButtons.B.ordinal()] > 1 ? x + 2 * currentDirection.getX() : x + currentDirection.getX();
+            y = getCurrentInputMapping()[GButtons.B.ordinal()] > 1 ? y + 2 * currentDirection.getY() : y + currentDirection.getY();
         }
         else
         {
-            switch(currentDirection)
+            if(getCurrentInputMapping()[GButtons.B.ordinal()] > 1 || (currentDirection.getDirectionValue(getCurrentInputMapping()) - 1) % 2 == 0)
             {
-                case NORTH:
-                case EAST:
-                case SOUTH:
-                case WEST:
-                case NORTHEAST:
-                case NORTHWEST:
-                case SOUTHEAST:
-                case SOUTHWEST:
-                    break;
-                default:
+                x += currentDirection.getX();
+                y += currentDirection.getY();
             }
         }
 
-        return false;
-        /*
-        if(getCurrentInputMapping()[GButtons.R.ordinal()] >= 1) {
-            return false;
-        }
-        return AssetLoader.getSprite("Lans_Bedroom_Collision").getColor(x,y).a != 0.0f;
-        */
-    }
-
-    public float getGridSection(Direction direction, int x, int y)
-    {
-        switch(currentDirection)
-        {
+        switch (currentDirection) {
             case NORTH:
-                return AssetLoader.getSprite("Lans_Bedroom_Collision").getColor(x,y-1).a;
-            case EAST:
             case SOUTH:
+                doVerticalCollisions(currentDirection == Direction.NORTH, oldX, oldY);
+                break;
+            case EAST:
             case WEST:
+                doHorizontalCollisions(currentDirection == Direction.WEST, oldX, oldY);
+                break;
             case NORTHEAST:
             case NORTHWEST:
             case SOUTHEAST:
             case SOUTHWEST:
+                doDiagnalCollisions(oldX,oldY);
                 break;
+        }
+    }
+
+    public void doDiagnalCollisions(int oldX, int oldY)
+    {
+        if(getCurrentSection().a == 1.0f)
+        {
+            x = oldX;
+            if(getCurrentSection().a == 1.0f) {
+                y = oldY;
+            }
+
+        }
+    }
+
+
+    public void doVerticalCollisions(boolean isGoingUp, int oldX, int oldY) {
+
+        if (getCurrentSection().a == 1.0f) {
+            int goLeft = 0;
+            int goRight = 0;
+            if(getCurrentSection().b == 1.0f)
+            {
+                y += isGoingUp ? 1 : -1;
+            }
+            int offset = 0;
+
+            boolean continueRunning = true;
+            while (continueRunning) {
+                offset++;
+
+                if (goLeft == 0) {
+                    if (getOffsetSection(-offset, 0).g == 1.0f && getOffsetSection(-offset, 0).a == 1.0f) {
+                        goLeft = -1;
+                    } else {
+                        if (getOffsetSection(-offset, 0).a == 0.0f) {
+                            goLeft = 1;
+                        }
+                    }
+                }
+                if (goRight == 0) {
+                    if (getOffsetSection(offset, 0).g == 1.0f && getOffsetSection(offset, 0).a == 1.0f) {
+                        goRight = -1;
+                    } else {
+                        if (getOffsetSection(offset, 0).a == 0.0f) {
+                            goRight = 1;
+                        }
+                    }
+                }
+
+                if (goLeft == -1 && goRight == -1) {
+                    y = oldY;
+                    continueRunning = false;
+                }
+                if (goLeft == 1) {
+                    x += (-1 * (getCurrentInputMapping()[GButtons.B.ordinal()] > 1 ? 2 : 1));
+                    continueRunning = false;
+                }
+                if (goRight == 1) {
+                    x += (1 * (getCurrentInputMapping()[GButtons.B.ordinal()] > 1 ? 2 : 1));
+                    continueRunning = false;
+                }
+            }
+
+
+        }
+    }
+
+
+    public void doHorizontalCollisions(boolean isGoingLeft, int oldX, int oldY) {
+
+        if (getCurrentSection().a == 1.0f) {
+            int goUp = 0;
+            int goDown = 0;
+            if(getCurrentSection().b == 1.0f)
+            {
+                x += isGoingLeft ? 1 : -1;
+            }
+            int offset = 0;
+
+            boolean continueRunning = true;
+            while (continueRunning) {
+                offset++;
+
+                if (goUp == 0) {
+                    if (getOffsetSection(0, -offset).g == 1.0f && getOffsetSection(0, -offset).a == 1.0f) {
+                        goUp = -1;
+                    } else {
+                        if (getOffsetSection(0, -offset).a == 0.0f) {
+                            goUp = 1;
+                        }
+                    }
+                }
+                if (goDown == 0) {
+                    if (getOffsetSection(0, offset).g == 1.0f && getOffsetSection(0, offset).a == 1.0f) {
+                        goDown = -1;
+                    } else {
+                        if (getOffsetSection(0, offset).a == 0.0f) {
+                            goDown = 1;
+                        }
+                    }
+                }
+
+                if (goUp == -1 && goDown == -1) {
+                    x = oldX;
+                    continueRunning = false;
+                }
+                if (goUp == 1) {
+                    y += -1;
+                    continueRunning = false;
+                }
+                if (goDown == 1) {
+                    y += 1;
+                    continueRunning = false;
+                }
+            }
+
+
+        }
+    }
+
+
+
+    public boolean isInsideMapBounds() {
+        final int width = AssetLoader.getSprite("Lans_Bedroom").getWidth();
+        final int height = AssetLoader.getSprite("Lans_Bedroom").getHeight();
+        return x < width && y < height && x >= 0 && y >= 0;
+    }
+
+
+    public Color getCurrentSection()
+    {
+        return getOffsetSection(0,0);
+    }
+
+    public Color getOffsetSection(int xOffset, int yOffset)
+    {
+        return AssetLoader.getSprite("Lans_Bedroom_Collision").getColor(x + xOffset, y + yOffset);
+    }
+
+    public Color getGridSection(Direction direction) {
+        switch (currentDirection) {
+            case NORTH:
+                return getOffsetSection(0,-1);
+            case EAST:
+                return getOffsetSection(1,0);
+            case SOUTH:
+                return getOffsetSection(0,1);
+            case WEST:
+                return getOffsetSection(-1,0);
+            case NORTHEAST:
+                return getOffsetSection(1,-1);
+            case NORTHWEST:
+                return getOffsetSection(-1,-1);
+            case SOUTHEAST:
+                return getOffsetSection(1,1);
+            case SOUTHWEST:
+                return getOffsetSection(-1,1);
             default:
-        }    }
+                return null;
+        }
+    }
 
 
 

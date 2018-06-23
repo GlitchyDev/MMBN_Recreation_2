@@ -223,4 +223,9 @@ public enum Direction {
         }
     }
 
+    final public boolean isDiagnal()
+    {
+        return this == NORTHEAST || this == NORTHWEST || this == SOUTHEAST || this == SOUTHWEST;
+    }
+
 }

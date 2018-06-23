@@ -17,7 +17,6 @@ public abstract class BasicControllerGameState extends BasicMonitoredGameState {
     private ArrayList<long[]> cachedInputs = new ArrayList<>();
     private long[] inputMapping;
 
-
     @Override
     public void init(GameContainer gameContainer, StateBasedGame stateBasedGame) {
         inputMapping = new long[GButtons.values().length];
@@ -30,7 +29,6 @@ public abstract class BasicControllerGameState extends BasicMonitoredGameState {
         }
     }
 
-
     @Override
     public void update(GameContainer gameContainer, StateBasedGame stateBasedGame, int i) throws SlickException {
         pollInputs();
@@ -41,6 +39,7 @@ public abstract class BasicControllerGameState extends BasicMonitoredGameState {
     {
         return cachedInputs.get(0);
     }
+
 
 
     private void pollInputs()
